@@ -1,16 +1,25 @@
 {{ attach_library('ims_landing_page_with_grid/ims_landing_page_with_grid') }}
 
-<h1>{{ content.field_ims_grid_title }}</h1>
-<h2>{{ content.field_ims_grid_subtitle }}</h2>
+<div class="ims_grid_layout">
+  <div class="ims_grid_layout_wrapper">
+    <div class="ims_grid_layout_headings">
+      <h1>{{ content.field_ims_grid_title }}</h1>
+      <h2>{{ content.field_ims_grid_subtitle }}</h2>
+    </div>
 
-{% if content.field_ims_social_media %}
-  <div class="social-media-container">
-    {{ content.field_ims_social_media }}
-  </div>
-{% endif %}
 
-{% if content.field_ims_grid_items %}
-  <div class="grid-items-container">
-    {{ content.field_ims_grid_items }}
+    {% if content.field_ims_social_media %}
+      <div class="ims_grid_layout_social_media_wrapper">
+        {{ content.field_ims_social_media }}
+      </div>
+    {% endif %}
+
+    {% if content.field_ims_grid_items %}
+      <div class="ims_grid_layout_grid_items_wrapper">
+        {{ content.field_ims_grid_items }}
+      </div>
+    {% endif %}
   </div>
-{% endif %}
+
+</div>
+
