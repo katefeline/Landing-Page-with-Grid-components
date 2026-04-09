@@ -5,6 +5,9 @@ dependencies:
     - entity_reference_revisions
     - node
     - paragraphs
+  enforced:
+    module:
+      - ims_landing_page_with_grid
 id: node.field_ims_grid_items
 field_name: field_ims_grid_items
 entity_type: node

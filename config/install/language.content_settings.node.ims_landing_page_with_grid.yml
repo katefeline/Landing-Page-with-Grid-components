@@ -3,6 +3,9 @@ status: true
 dependencies:
   config:
     - node.type.ims_landing_page_with_grid
+  enforced:
+    module:
+      - ims_landing_page_with_grid
 id: node.ims_landing_page_with_grid
 target_entity_type_id: node
 target_bundle: ims_landing_page_with_grid

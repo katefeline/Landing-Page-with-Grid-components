@@ -9,6 +9,9 @@ dependencies:
     - dsu_c_core
     - link_attributes
     - media_library
+  enforced:
+    module:
+      - ims_landing_page_with_grid
 id: paragraph.ims_social_media_item.default
 targetEntityType: paragraph
 bundle: ims_social_media_item

@@ -7,6 +7,9 @@ dependencies:
     - paragraphs.paragraphs_type.ims_social_media_item
   module:
     - entity_reference_revisions
+  enforced:
+    module:
+      - ims_landing_page_with_grid
 id: node.ims_landing_page_with_grid.field_ims_social_media
 field_name: field_ims_social_media
 entity_type: node

@@ -7,6 +7,9 @@ dependencies:
     - paragraphs.paragraphs_type.ims_social_media_item
   module:
     - link
+  enforced:
+    module:
+      - ims_landing_page_with_grid
 id: paragraph.ims_social_media_item.default
 targetEntityType: paragraph
 bundle: ims_social_media_item

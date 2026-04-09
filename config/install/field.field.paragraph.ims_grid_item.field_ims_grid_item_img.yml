@@ -5,6 +5,9 @@ dependencies:
     - field.storage.paragraph.field_ims_grid_item_img
     - media.type.image
     - paragraphs.paragraphs_type.ims_grid_item
+  enforced:
+    module:
+      - ims_landing_page_with_grid
 id: paragraph.ims_grid_item.field_ims_grid_item_img
 field_name: field_ims_grid_item_img
 entity_type: paragraph

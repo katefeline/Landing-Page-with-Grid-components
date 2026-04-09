@@ -3,6 +3,9 @@ status: true
 dependencies:
   module:
     - paragraphs
+  enforced:
+    module:
+      - ims_landing_page_with_grid
 id: paragraph.field_ims_grid_item_subtitle
 field_name: field_ims_grid_item_subtitle
 entity_type: paragraph

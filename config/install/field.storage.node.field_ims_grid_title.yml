@@ -3,6 +3,9 @@ status: true
 dependencies:
   module:
     - node
+  enforced:
+    module:
+      - ims_landing_page_with_grid
 id: node.field_ims_grid_title
 field_name: field_ims_grid_title
 entity_type: node

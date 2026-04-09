@@ -10,6 +10,9 @@ dependencies:
   module:
     - entity_reference_revisions
     - user
+  enforced:
+    module:
+      - ims_landing_page_with_grid
 id: node.ims_landing_page_with_grid.default
 targetEntityType: node
 bundle: ims_landing_page_with_grid

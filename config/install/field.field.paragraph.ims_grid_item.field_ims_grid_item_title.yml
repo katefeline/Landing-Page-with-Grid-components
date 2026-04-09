@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.paragraph.field_ims_grid_item_title
     - paragraphs.paragraphs_type.ims_grid_item
+  enforced:
+    module:
+      - ims_landing_page_with_grid
 id: paragraph.ims_grid_item.field_ims_grid_item_title
 field_name: field_ims_grid_item_title
 entity_type: paragraph

@@ -4,6 +4,9 @@ dependencies:
   config:
     - field.storage.node.field_ims_grid_title
     - node.type.ims_landing_page_with_grid
+  enforced:
+    module:
+      - ims_landing_page_with_grid
 id: node.ims_landing_page_with_grid.field_ims_grid_title
 field_name: field_ims_grid_title
 entity_type: node

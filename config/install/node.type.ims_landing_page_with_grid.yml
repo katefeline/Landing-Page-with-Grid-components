@@ -7,6 +7,9 @@ dependencies:
     - node_revision_delete
     - scheduler
     - unique_entity_title
+  enforced:
+    module:
+      - ims_landing_page_with_grid
 third_party_settings:
   menu_ui:
     available_menus:
