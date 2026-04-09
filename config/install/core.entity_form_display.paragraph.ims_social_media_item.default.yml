@@ -1,0 +1,42 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ims_social_media_item.field_ims_social_media_item_img
+    - field.field.paragraph.ims_social_media_item.field_ims_social_media_item_link
+    - paragraphs.paragraphs_type.ims_social_media_item
+  module:
+    - dsu_c_core
+    - link_attributes
+    - media_library
+id: paragraph.ims_social_media_item.default
+targetEntityType: paragraph
+bundle: ims_social_media_item
+mode: default
+content:
+  field_ims_social_media_item_img:
+    type: media_library_widget
+    weight: 3
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_ims_social_media_item_link:
+    type: link_attributes
+    weight: 7
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: false
+        name: false
+        target: true
+        rel: true
+        class: true
+        accesskey: false
+      widget_default_open: expandIfValuesSet
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

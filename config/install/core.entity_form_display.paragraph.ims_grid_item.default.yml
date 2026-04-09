@@ -1,0 +1,60 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ims_grid_item.field_ims_grid_item_img
+    - field.field.paragraph.ims_grid_item.field_ims_grid_item_link
+    - field.field.paragraph.ims_grid_item.field_ims_grid_item_subtitle
+    - field.field.paragraph.ims_grid_item.field_ims_grid_item_title
+    - paragraphs.paragraphs_type.ims_grid_item
+  module:
+    - dsu_c_core
+    - link_attributes
+    - media_library
+id: paragraph.ims_grid_item.default
+targetEntityType: paragraph
+bundle: ims_grid_item
+mode: default
+content:
+  field_ims_grid_item_img:
+    type: media_library_widget
+    weight: 11
+    region: content
+    settings:
+      media_types: {  }
+    third_party_settings: {  }
+  field_ims_grid_item_link:
+    type: link_attributes
+    weight: 15
+    region: content
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+      enabled_attributes:
+        id: false
+        name: false
+        target: true
+        rel: true
+        class: true
+        accesskey: false
+      widget_default_open: expandIfValuesSet
+    third_party_settings: {  }
+  field_ims_grid_item_subtitle:
+    type: string_textfield
+    weight: 7
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  field_ims_grid_item_title:
+    type: string_textfield
+    weight: 3
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  status: true

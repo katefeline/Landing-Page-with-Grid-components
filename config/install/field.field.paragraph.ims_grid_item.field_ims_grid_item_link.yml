@@ -1,0 +1,22 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ims_grid_item_link
+    - paragraphs.paragraphs_type.ims_grid_item
+  module:
+    - link
+id: paragraph.ims_grid_item.field_ims_grid_item_link
+field_name: field_ims_grid_item_link
+entity_type: paragraph
+bundle: ims_grid_item
+label: 'IMS grid item link'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  title: 1
+  link_type: 17
+field_type: link

@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ims_grid_item_subtitle
+    - paragraphs.paragraphs_type.ims_grid_item
+id: paragraph.ims_grid_item.field_ims_grid_item_subtitle
+field_name: field_ims_grid_item_subtitle
+entity_type: paragraph
+bundle: ims_grid_item
+label: 'IMS grid item subtitle'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

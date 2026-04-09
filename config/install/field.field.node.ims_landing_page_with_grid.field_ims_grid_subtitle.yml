@@ -1,0 +1,18 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ims_grid_subtitle
+    - node.type.ims_landing_page_with_grid
+id: node.ims_landing_page_with_grid.field_ims_grid_subtitle
+field_name: field_ims_grid_subtitle
+entity_type: node
+bundle: ims_landing_page_with_grid
+label: 'IMS Grid Subtitle'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string_long

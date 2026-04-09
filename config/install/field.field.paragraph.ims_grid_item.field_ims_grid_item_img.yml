@@ -1,0 +1,28 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_ims_grid_item_img
+    - media.type.image
+    - paragraphs.paragraphs_type.ims_grid_item
+id: paragraph.ims_grid_item.field_ims_grid_item_img
+field_name: field_ims_grid_item_img
+entity_type: paragraph
+bundle: ims_grid_item
+label: 'IMS grid item img'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:media'
+  handler_settings:
+    target_bundles:
+      image: image
+    sort:
+      field: _none
+      direction: ASC
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

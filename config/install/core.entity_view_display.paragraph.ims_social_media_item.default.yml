@@ -1,0 +1,37 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.ims_social_media_item.field_ims_social_media_item_img
+    - field.field.paragraph.ims_social_media_item.field_ims_social_media_item_link
+    - paragraphs.paragraphs_type.ims_social_media_item
+  module:
+    - link
+id: paragraph.ims_social_media_item.default
+targetEntityType: paragraph
+bundle: ims_social_media_item
+mode: default
+content:
+  field_ims_social_media_item_img:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 0
+    region: content
+  field_ims_social_media_item_link:
+    type: link
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    weight: 1
+    region: content
+hidden:
+  search_api_excerpt: true

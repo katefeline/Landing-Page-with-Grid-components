@@ -1,0 +1,393 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ims_grid_items
+    - node.type.ims_landing_page_with_grid
+    - paragraphs.paragraphs_type.ims_grid_item
+  module:
+    - entity_reference_revisions
+id: node.ims_landing_page_with_grid.field_ims_grid_items
+field_name: field_ims_grid_items
+entity_type: node
+bundle: ims_landing_page_with_grid
+label: 'IMS grid items'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:paragraph'
+  handler_settings:
+    target_bundles:
+      ims_grid_item: ims_grid_item
+    negate: 0
+    target_bundles_drag_drop:
+      accordion:
+        weight: 123
+        enabled: false
+      accordion_item:
+        weight: 124
+        enabled: false
+      anchor_component:
+        weight: 125
+        enabled: false
+      block:
+        weight: 126
+        enabled: false
+      brand_alphabet:
+        weight: 127
+        enabled: false
+      brand_categories:
+        weight: 128
+        enabled: false
+      brand_main_teaser:
+        weight: 129
+        enabled: false
+      brand_product_teaser:
+        weight: 130
+        enabled: false
+      brand_quality_teaser:
+        weight: 131
+        enabled: false
+      brand_teaser_social_link:
+        weight: 132
+        enabled: false
+      c_image:
+        weight: 138
+        enabled: false
+      c_sideimagetext:
+        weight: 139
+        enabled: false
+      c_slide:
+        weight: 140
+        enabled: false
+      c_slider:
+        weight: 141
+        enabled: false
+      c_text:
+        weight: 142
+        enabled: false
+      categories_listing:
+        weight: 133
+        enabled: false
+      comment:
+        weight: 134
+        enabled: false
+      comments:
+        weight: 135
+        enabled: false
+      component_headline:
+        weight: 136
+        enabled: false
+      cta_text_and_body:
+        weight: 137
+        enabled: false
+      detail_page_tags:
+        weight: 143
+        enabled: false
+      dsu_srh_how_to_burn_it:
+        weight: 144
+        enabled: false
+      dsu_tint:
+        weight: 145
+        enabled: false
+      expert_teaser:
+        weight: 147
+        enabled: false
+      expert_teaser_content:
+        weight: 148
+        enabled: false
+      experts:
+        weight: 146
+        enabled: false
+      footer_media_links:
+        weight: 149
+        enabled: false
+      headline_type:
+        weight: 150
+        enabled: false
+      hero_stage:
+        weight: 151
+        enabled: false
+      iframe:
+        weight: 152
+        enabled: false
+      image_carousel:
+        weight: 153
+        enabled: false
+      ims_grid_item:
+        weight: 154
+        enabled: true
+      ims_social_media:
+        weight: 155
+        enabled: false
+      ims_social_media_item:
+        weight: 156
+        enabled: false
+      knowledge:
+        weight: 157
+        enabled: false
+      layout_25_25_50:
+        weight: 158
+        enabled: false
+      layout_25_50_25:
+        weight: 159
+        enabled: false
+      layout_25_75:
+        weight: 160
+        enabled: false
+      layout_33_66:
+        weight: 161
+        enabled: false
+      layout_50_25_25:
+        weight: 162
+        enabled: false
+      layout_66_33:
+        weight: 163
+        enabled: false
+      layout_75_25:
+        weight: 164
+        enabled: false
+      layout_columns_1:
+        weight: 165
+        enabled: false
+      layout_columns_2:
+        weight: 166
+        enabled: false
+      layout_columns_20:
+        weight: 167
+        enabled: false
+      layout_columns_3:
+        weight: 168
+        enabled: false
+      layout_columns_4:
+        weight: 169
+        enabled: false
+      macronutrients:
+        weight: 170
+        enabled: false
+      maggi_teaser_content_component:
+        weight: 171
+        enabled: false
+      media_information:
+        weight: 172
+        enabled: false
+      ms_full_video:
+        weight: 173
+        enabled: false
+      ms_gmap_latlongs:
+        weight: 174
+        enabled: false
+      ms_google_map:
+        weight: 175
+        enabled: false
+      ms_hero_banner:
+        weight: 176
+        enabled: false
+      ms_icon_text_description:
+        weight: 177
+        enabled: false
+      ms_quotations:
+        weight: 178
+        enabled: false
+      ms_quotations_wrapper:
+        weight: 179
+        enabled: false
+      ms_reading_indicator:
+        weight: 180
+        enabled: false
+      ms_recipe_badge:
+        weight: 181
+        enabled: false
+      ms_single_testimonial:
+        weight: 182
+        enabled: false
+      ms_stats:
+        weight: 183
+        enabled: false
+      ms_stats_item:
+        weight: 184
+        enabled: false
+      ms_sustainability_pillars:
+        weight: 185
+        enabled: false
+      ms_sustainability_pillars_item:
+        weight: 186
+        enabled: false
+      navigation_placeholder:
+        weight: 187
+        enabled: false
+      nde_accordion_c_container:
+        weight: 188
+        enabled: false
+      nde_accordion_panel_container:
+        weight: 189
+        enabled: false
+      newsletter_carousel_component:
+        weight: 190
+        enabled: false
+      paragraph_view:
+        weight: 191
+        enabled: false
+      paylogic_iframe:
+        weight: 192
+        enabled: false
+      playlist_component:
+        weight: 193
+        enabled: false
+      playlist_grid:
+        weight: 194
+        enabled: false
+      prod_ingred_additives_item:
+        weight: 209
+        enabled: false
+      prod_nutri_inf_item:
+        weight: 210
+        enabled: false
+      prod_prep_feeding_table_item:
+        weight: 211
+        enabled: false
+      product_allergen_item:
+        weight: 196
+        enabled: false
+      product_allergen_nutritional_inf:
+        weight: 197
+        enabled: false
+      product_explorer_heading:
+        weight: 198
+        enabled: false
+      product_explorer_teaser:
+        weight: 199
+        enabled: false
+      product_icons:
+        weight: 200
+        enabled: false
+      product_info:
+        weight: 201
+        enabled: false
+      product_ingredients:
+        weight: 202
+        enabled: false
+      product_listing_block:
+        weight: 203
+        enabled: false
+      product_main_section:
+        weight: 204
+        enabled: false
+      product_nutritional_information:
+        weight: 205
+        enabled: false
+      product_nutritional_unit:
+        weight: 206
+        enabled: false
+      product_preparation:
+        weight: 207
+        enabled: false
+      product_section_columns:
+        weight: 208
+        enabled: false
+      products:
+        weight: 195
+        enabled: false
+      quotes_box:
+        weight: 212
+        enabled: false
+      recipe_ingredients:
+        weight: 214
+        enabled: false
+      recipe_steps:
+        weight: 215
+        enabled: false
+      recipe_tools:
+        weight: 216
+        enabled: false
+      recipe_variants:
+        weight: 217
+        enabled: false
+      recipes:
+        weight: 213
+        enabled: false
+      related_recipes_in_other_languag:
+        weight: 218
+        enabled: false
+      short_teaser:
+        weight: 219
+        enabled: false
+      social_media_links:
+        weight: 220
+        enabled: false
+      srh_cloudfront_media:
+        weight: 221
+        enabled: false
+      srh_ingredient:
+        weight: 222
+        enabled: false
+      srh_ingredient_group:
+        weight: 223
+        enabled: false
+      srh_macronutrients_unittype:
+        weight: 224
+        enabled: false
+      srh_nutrient:
+        weight: 225
+        enabled: false
+      srh_sidedish:
+        weight: 226
+        enabled: false
+      srh_sport:
+        weight: 227
+        enabled: false
+      srh_step:
+        weight: 228
+        enabled: false
+      srh_step_group:
+        weight: 229
+        enabled: false
+      srh_tip:
+        weight: 230
+        enabled: false
+      srh_version:
+        weight: 231
+        enabled: false
+      stories:
+        weight: 232
+        enabled: false
+      tags_selector:
+        weight: 233
+        enabled: false
+      teaser:
+        weight: 234
+        enabled: false
+      teaser_carousel_component:
+        weight: 235
+        enabled: false
+      teaser_column_layout:
+        weight: 236
+        enabled: false
+      teaser_cycle:
+        weight: 237
+        enabled: false
+      teaser_expert_component:
+        weight: 238
+        enabled: false
+      teaser_full:
+        weight: 239
+        enabled: false
+      teaser_popup:
+        weight: 240
+        enabled: false
+      text:
+        weight: 241
+        enabled: false
+      text_only:
+        weight: 242
+        enabled: false
+      tips:
+        weight: 243
+        enabled: false
+      video_single:
+        weight: 244
+        enabled: false
+field_type: entity_reference_revisions
