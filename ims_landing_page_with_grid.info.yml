@@ -1,0 +1,7 @@
+name: 'IMS Landing Page with Grid Components'
+type: module
+description: 'IMS Module for landing page with grid components'
+package: IMS
+core_version_requirement: ^10 || ^11
+libraries:
+    - ims_landing_page_with_grid/ims_landing_page_with_grid

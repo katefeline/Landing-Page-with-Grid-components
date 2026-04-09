@@ -1,0 +1,16 @@
+{{ attach_library('ims_landing_page_with_grid/ims_landing_page_with_grid') }}
+
+<h1>{{ content.field_ims_grid_title }}</h1>
+<h2>{{ content.field_ims_grid_subtitle }}</h2>
+
+{% if content.field_ims_social_media %}
+  <div class="social-media-container">
+    {{ content.field_ims_social_media }}
+  </div>
+{% endif %}
+
+{% if content.field_ims_grid_items %}
+  <div class="grid-items-container">
+    {{ content.field_ims_grid_items }}
+  </div>
+{% endif %}

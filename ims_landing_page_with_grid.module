@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * @file
+ * IMS landing page with grid components made with paragraphs.
+ */
+
+/**
+ * Implements hook_theme().
+ */
+function ims_landing_page_with_grid_theme($existing, $type, $theme, $path) {
+  return [
+    'node__ims_landing_page_with_grid' => [
+      'template'  => 'node--ims-landing-page-with-grid',
+      'base hook' => 'node',
+    ],
+    'paragraph__ims_social_media_item' => [
+      'template'  => 'paragraph--ims-social-media-item',
+      'base hook' => 'paragraph',
+    ],
+    'paragraph__ims_grid_item' => [
+      'template' => 'paragraph--ims-grid-item',
+      'base hook' => 'paragraph',
+    ]
+  ];
+}
+
+/**
+ * Implements hook_preprocess_paragraph__ims_social_media_item().
+ */
+function ims_landing_page_with_grid_preprocess_paragraph__ims_social_media_item(array &$variables) {
+  \Drupal::service('ims_landing_page_with_grid.paragraph_preprocessor')
+    ->preprocessSocialMediaItem($variables);
+}
+
+/**
+ * Implements hook_preprocess_paragraph__ims_grid_item().
+ */
+function ims_landing_page_with_grid_preprocess_paragraph__ims_grid_item(array &$variables) {
+  \Drupal::service('ims_landing_page_with_grid.paragraph_preprocessor')
+    ->preprocessGridItem($variables);
+}

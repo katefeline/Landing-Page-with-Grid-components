@@ -1,0 +1,5 @@
+services:
+  ims_landing_page_with_grid.paragraph_preprocessor:
+    class: Drupal\ims_landing_page_with_grid\Service\ImsParagraphPreprocessor
+    arguments: ['@file_url_generator']
+
