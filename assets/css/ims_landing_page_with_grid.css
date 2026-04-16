@@ -1,5 +1,5 @@
 .ims_grid_layout {
-  margin: 5vh;
+  margin: 6vh;
 }
 .ims_grid_layout_headings {
   margin: 1vh;
@@ -20,8 +20,8 @@
 }
 
 .ims_grid_layout_social_media_wrapper .social-item img {
-  max-width: 25px;
-  max-height: 25px;
+  width: 25px;
+  height: 25px;
 }
 
 .ims_grid_layout_grid_entity_reference_template {
@@ -52,6 +52,10 @@
   align-items: center;
 }
 
+.ims_grid_layout_grid_items .ims_grid_layout_grid_items_heading h3 {
+  margin-left: 1vh;
+}
+
 .ims_grid_layout_grid_items .ims_grid_layout_grid_items_heading img {
   width: 50px;
   height: 50px;
@@ -60,8 +64,12 @@
 
 .ims_grid_layout_grid_items_text {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.ims_grid_layout_grid_items_text p {
+  margin-bottom: 1vh;
 }
 
 .ims_grid_layout_grid_items_text a {
@@ -71,6 +79,7 @@
   background-position: 100% 100%;
   transition: all 0.3s ease;
   padding: 2vh;
+  margin: 1vh;
 }
 .ims_grid_layout_grid_items_text a:hover {
   color: #0a0a0a;
@@ -82,7 +91,7 @@
   content: url(/themes/custom/maggi/UI/build/images/Cp-5Fbr.svg);
   background-size: 0.625rem;
   background-repeat: no-repeat;
-  margin-right: 0.75rem;
+  margin: 0 0.75rem;
   vertical-align: middle;
 }
 
