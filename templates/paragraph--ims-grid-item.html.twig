@@ -1,6 +1,13 @@
-<div class="">
-  <h4>{{ grid_title }}</h4>
-  <p>{{ grid_subtitle }}</p>
-  <a href="{{ grid_link_url }}" target="{{ grid_link_target|default('_blank') }}" rel="{{ grid_link_rel }}">{{ grid_link_text }}</a>
-  <img src="{{ grid_image_url }}" alt="{{ grid_image_alt|e }}">
+<div class="ims_grid_layout_grid_items">
+  <div>
+    <div class="ims_grid_layout_grid_items_heading">
+      <img src="{{ grid_image_url }}" alt="{{ grid_image_alt|e }}">
+      <h4>{{ grid_title }}</h4>
+    </div>
+    <hr>
+    <div class="ims_grid_layout_grid_items_text">
+      <p>{{ grid_subtitle }}</p>
+      <a href="{{ grid_link_url }}" target="{{ grid_link_target|default('_blank') }}" rel="{{ grid_link_rel }}">{{ grid_link_text }}</a>
+    </div>
+  </div>
 </div>

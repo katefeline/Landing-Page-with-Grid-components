@@ -21,6 +21,10 @@ function ims_landing_page_with_grid_theme($existing, $type, $theme, $path) {
     'paragraph__ims_grid_item' => [
       'template' => 'paragraph--ims-grid-item',
       'base hook' => 'paragraph',
+    ],
+    'field__node__field_ims_grid_items__ims_landing_page_with_grid' => [
+      'base hook' => 'field',
+      'template' => 'field--node--field-ims-grid-items--ims-landing-page-with-grid',
     ]
   ];
 }

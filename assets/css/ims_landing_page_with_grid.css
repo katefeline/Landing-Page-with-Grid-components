@@ -1,3 +1,91 @@
-.ims_grid_layout_grid_items_wrapper {
+.ims_grid_layout {
   margin: 5vh;
+}
+.ims_grid_layout_headings {
+  margin: 1vh;
+}
+
+.ims_grid_layout_headings h1 {
+  margin-bottom: 1vh;
+}
+
+.ims_grid_layout_social_media_wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 2vh;
+}
+
+.ims_grid_layout_social_media_wrapper .social-item {
+  margin-right: 3vh;
+}
+
+.ims_grid_layout_social_media_wrapper .social-item img {
+  max-width: 25px;
+  max-height: 25px;
+}
+
+.ims_grid_layout_grid_entity_reference_template {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2vh;
+}
+
+@media (max-width: 767px) {
+  .ims_grid_layout_grid_entity_reference_template {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 525px) {
+  .ims_grid_layout_grid_entity_reference_template {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ims_grid_layout_grid_items {
+  background-color: #f3f3f3;
+  padding: 1vh;
+}
+
+.ims_grid_layout_grid_items .ims_grid_layout_grid_items_heading {
+  display: flex;
+  align-items: center;
+}
+
+.ims_grid_layout_grid_items .ims_grid_layout_grid_items_heading img {
+  width: 50px;
+  height: 50px;
+  margin: 1vh;
+}
+
+.ims_grid_layout_grid_items_text {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.ims_grid_layout_grid_items_text a {
+  color: #fefefe;
+  background-image: linear-gradient(90deg, #fff33e 50%, #3e2b1a 0);
+  background-size: 201% 100%;
+  background-position: 100% 100%;
+  transition: all 0.3s ease;
+  padding: 2vh;
+}
+.ims_grid_layout_grid_items_text a:hover {
+  color: #0a0a0a;
+}
+.ims_grid_layout_grid_items_text a::after {
+  color: #b39d8a;
+}
+.ims_grid_layout_grid_items_text a::after {
+  content: url(/themes/custom/maggi/UI/build/images/Cp-5Fbr.svg);
+  background-size: 0.625rem;
+  background-repeat: no-repeat;
+  margin-right: 0.75rem;
+  vertical-align: middle;
+}
+
+.ims_grid_layout_grid_items_text a:hover::before {
+  content: url(/themes/custom/maggi/UI/build/images/2DLn8gj.svg);
 }
