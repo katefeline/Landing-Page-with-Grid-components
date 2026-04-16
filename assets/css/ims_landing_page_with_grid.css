@@ -28,6 +28,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2vh;
+  margin-top: 3vh;
 }
 
 @media (max-width: 767px) {
@@ -91,7 +92,7 @@
   content: url(/themes/custom/maggi/UI/build/images/Cp-5Fbr.svg);
   background-size: 0.625rem;
   background-repeat: no-repeat;
-  margin: 0 0.75rem;
+  margin: 1vh;
   vertical-align: middle;
 }
 
