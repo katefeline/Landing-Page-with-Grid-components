@@ -1,4 +1,4 @@
-<div class="ims_grid_layout_grid_items">
+<div class="ims_grid_layout_grid_items" style="background-color: {{ layout_bg_color|e('html_attr') }};">
     <div class="ims_grid_layout_grid_items_heading">
       <img src="{{ grid_image_url }}" alt="{{ grid_image_alt|e }}">
       <h3>{{ grid_title }}</h3>
@@ -9,3 +9,5 @@
       <a href="{{ grid_link_url }}" target="{{ grid_link_target|default('_blank') }}" rel="{{ grid_link_rel }}">{{ grid_link_text }}</a>
     </div>
 </div>
+
+

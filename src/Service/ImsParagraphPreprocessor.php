@@ -40,6 +40,7 @@ class ImsParagraphPreprocessor {
 
     $variables['grid_title'] = '';
     $variables['grid_subtitle'] = '';
+    $variables['layout_bg_color'] = '#f3f3f3'; // Default color
 
     if ($paragraph->hasField('field_ims_grid_item_title') && !$paragraph->get('field_ims_grid_item_title')->isEmpty()) {
       $variables['grid_title'] = $paragraph->get('field_ims_grid_item_title')->value;
@@ -47,6 +48,12 @@ class ImsParagraphPreprocessor {
 
     if ($paragraph->hasField('field_ims_grid_item_subtitle') && !$paragraph->get('field_ims_grid_item_subtitle')->isEmpty()) {
       $variables['grid_subtitle'] = $paragraph->get('field_ims_grid_item_subtitle')->value;
+    }
+
+    $parent_entity = $paragraph->getParentEntity();
+    if ($parent_entity && $parent_entity->hasField('field_ims_grid_background_color') && !$parent_entity->get('field_ims_grid_background_color')->isEmpty()) {
+      $color_field = $parent_entity->get('field_ims_grid_background_color')->first();
+      $variables['layout_bg_color'] = $color_field->color ?? $color_field->value ?? '#f3f3f3';
     }
 
     $image = $this->extractImageData($paragraph, 'field_ims_grid_item_img');
