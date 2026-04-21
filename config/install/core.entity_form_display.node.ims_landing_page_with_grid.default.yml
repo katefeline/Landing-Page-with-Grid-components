@@ -2,6 +2,7 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.ims_landing_page_with_grid.field_ims_grid_background_color
     - field.field.node.ims_landing_page_with_grid.field_ims_grid_items
     - field.field.node.ims_landing_page_with_grid.field_ims_grid_subtitle
     - field.field.node.ims_landing_page_with_grid.field_ims_grid_title
@@ -9,14 +10,12 @@ dependencies:
     - node.type.ims_landing_page_with_grid
     - workflows.workflow.editorial
   module:
+    - color_field
     - content_moderation
     - lightning_scheduler
     - paragraphs
     - paragraphs_browser
     - path
-  enforced:
-    module:
-      - ims_landing_page_with_grid
 id: node.ims_landing_page_with_grid.default
 targetEntityType: node
 bundle: ims_landing_page_with_grid
@@ -27,6 +26,14 @@ content:
     weight: 10
     region: content
     settings: {  }
+    third_party_settings: {  }
+  field_ims_grid_background_color:
+    type: color_field_widget_default
+    weight: 127
+    region: content
+    settings:
+      placeholder_color: ''
+      placeholder_opacity: ''
     third_party_settings: {  }
   field_ims_grid_items:
     type: paragraphs

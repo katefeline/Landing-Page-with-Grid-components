@@ -2,22 +2,30 @@ langcode: en
 status: true
 dependencies:
   config:
+    - field.field.node.ims_landing_page_with_grid.field_ims_grid_background_color
     - field.field.node.ims_landing_page_with_grid.field_ims_grid_items
     - field.field.node.ims_landing_page_with_grid.field_ims_grid_subtitle
     - field.field.node.ims_landing_page_with_grid.field_ims_grid_title
     - field.field.node.ims_landing_page_with_grid.field_ims_social_media
     - node.type.ims_landing_page_with_grid
   module:
+    - color_field
     - entity_reference_revisions
     - user
-  enforced:
-    module:
-      - ims_landing_page_with_grid
 id: node.ims_landing_page_with_grid.default
 targetEntityType: node
 bundle: ims_landing_page_with_grid
 mode: default
 content:
+  field_ims_grid_background_color:
+    type: color_field_formatter_text
+    label: hidden
+    settings:
+      format: hex
+      opacity: true
+    third_party_settings: {  }
+    weight: 107
+    region: content
   field_ims_grid_items:
     type: entity_reference_revisions_entity_view
     label: hidden

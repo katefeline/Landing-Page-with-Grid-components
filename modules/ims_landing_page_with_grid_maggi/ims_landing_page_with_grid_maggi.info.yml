@@ -1,0 +1,7 @@
+name: 'IMS Landing Page with Grid Components Maggi'
+type: module
+description: 'Extends IMS Landing Page with Grid Components module with styles for Maggi theme'
+package: IMS
+core_version_requirement: ^10 || ^11
+dependencies:
+  - ims_landing_page_with_grid:ims_landing_page_with_grid

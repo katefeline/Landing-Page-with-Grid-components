@@ -1,0 +1,5 @@
+ims_landing_page_with_grid_maggi:
+  version: 1.x
+  css:
+    theme:
+      assets/css/ims_landing_page_with_grid_maggi.css: {}

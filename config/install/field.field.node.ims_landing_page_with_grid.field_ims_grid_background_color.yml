@@ -1,0 +1,21 @@
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_ims_grid_background_color
+    - node.type.ims_landing_page_with_grid
+  module:
+    - color_field
+id: node.ims_landing_page_with_grid.field_ims_grid_background_color
+field_name: field_ims_grid_background_color
+entity_type: node
+bundle: ims_landing_page_with_grid
+label: 'ims field background color item'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  opacity: 1
+field_type: color_field_type

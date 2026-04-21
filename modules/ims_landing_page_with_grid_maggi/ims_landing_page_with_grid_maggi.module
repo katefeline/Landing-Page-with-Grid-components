@@ -1,0 +1,15 @@
+<?php
+
+/**
+ * @file
+ * Primary module hooks for ims_landing_page_with_grid_maggi module.
+ */
+
+/**
+ * Implements hook_preprocess_node__ims_landing_page_with_grid().
+ */
+function ims_landing_page_with_grid_maggi_preprocess_node__ims_landing_page_with_grid(&$variables) {
+  $variables['#attached']['library'][] = 'ims_landing_page_with_grid_maggi/ims_landing_page_with_grid_maggi';
+}
+
+

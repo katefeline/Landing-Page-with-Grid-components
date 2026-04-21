@@ -1,0 +1,28 @@
+.ims_grid_layout_grid_items_text a {
+  color: #fefefe;
+  background-image: linear-gradient(90deg, #fff33e 50%, #3e2b1a 0);
+  background-size: 201% 100%;
+  background-position: 100% 100%;
+  transition: all 0.3s ease;
+  padding: 2vh;
+  margin: 1vh;
+}
+.ims_grid_layout_grid_items_text a:hover {
+  color: #0a0a0a;
+  background-image: linear-gradient(90deg, #3e2b1a 0, #fff33e 50%);
+  transition: all 0.3s ease;
+}
+.ims_grid_layout_grid_items_text a::after {
+  color: #b39d8a;
+}
+.ims_grid_layout_grid_items_text a::after {
+  content: url(/themes/custom/maggi/UI/build/images/Cp-5Fbr.svg);
+  background-size: 0.625rem;
+  background-repeat: no-repeat;
+  margin: 1vh;
+  vertical-align: middle;
+}
+
+.ims_grid_layout_grid_items_text a:hover::after {
+  content: url(/themes/custom/maggi/UI/build/images/2DLn8gj.svg);
+}
