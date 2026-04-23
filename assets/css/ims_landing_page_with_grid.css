@@ -9,6 +9,16 @@
   margin-bottom: 1vh;
 }
 
+.ims_grid_layout_headings h2 {
+  font-size: 25px;
+}
+
+@media (min-width: 1200px) {
+  .ims_grid_layout_headings h2 {
+    line-height: 40px;
+  }
+}
+
 .ims_grid_layout_social_media_wrapper {
   display: flex;
   justify-content: center;

@@ -5,7 +5,7 @@
   background-position: 100% 100%;
   transition: all 0.3s ease;
   padding: 2vh;
-  margin: 1vh;
+  margin: 0.5vh;
 }
 .ims_grid_layout_grid_items_text a:hover {
   color: #0a0a0a;
@@ -17,9 +17,7 @@
 }
 .ims_grid_layout_grid_items_text a::after {
   content: url(/themes/custom/maggi/UI/build/images/Cp-5Fbr.svg);
-  background-size: 0.625rem;
-  background-repeat: no-repeat;
-  margin: 1vh;
+  margin-left: 1vh;
   vertical-align: middle;
 }
 
