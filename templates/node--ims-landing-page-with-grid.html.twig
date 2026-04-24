@@ -1,7 +1,12 @@
 {{ attach_library('ims_landing_page_with_grid/ims_landing_page_with_grid') }}
 
 <div class="ims_grid_layout">
-  <div class="ims_grid_layout_wrapper">
+  {% if banner %}
+    <div class="ims_grid_banner_container">
+      <img class='ims_grid_banner' src="{{ banner_image_url }}" alt="{{ banner_image_alt|e }}">
+    </div>
+  {% endif %}
+  <div class="{% if banner %}ims_grid_layout_wrapper_no_margin {% else %}ims_grid_layout_wrapper {% endif %}">
     <div class="ims_grid_layout_headings">
       <h1>{{ content.field_ims_grid_title }}</h1>
       <h2>{{ content.field_ims_grid_subtitle }}</h2>

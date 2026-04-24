@@ -1,6 +1,35 @@
-.ims_grid_layout {
+.ims_grid_layout_wrapper {
   margin: 6vh;
 }
+
+.ims_grid_layout_wrapper_no_margin {
+  margin: 0 6vh 6vh;
+}
+
+.ims_grid_banner {
+  object-fit: cover;
+  height: 50vh;
+  display: block;
+  width: 100%;
+  -webkit-mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+  mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+}
+
+.ims_grid_banner_container {
+  width: 100%;
+}
+
+/*.ims_grid_banner_container::after {*/
+/*  content: '';*/
+/*  position: absolute;*/
+/*  bottom: 0;*/
+/*  left: 0;*/
+/*  right: 0;*/
+/*  height: 100%;*/
+/*  background: linear-gradient(180deg, hsla(0, 0%, 98.8%, 0) 47%, hsla(0, 0%, 98.8%, .7) 75%, #fcfcfc);*/
+/*  pointer-events: none;*/
+/*}*/
+
 .ims_grid_layout_headings {
   margin: 1vh;
 }

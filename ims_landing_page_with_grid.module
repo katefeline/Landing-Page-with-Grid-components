@@ -44,3 +44,12 @@ function ims_landing_page_with_grid_preprocess_paragraph__ims_grid_item(array &$
   \Drupal::service('ims_landing_page_with_grid.paragraph_preprocessor')
     ->preprocessGridItem($variables);
 }
+
+
+/**
+ * Implements hook_preprocess_node__ims_landing_page_with_grid().
+ */
+function ims_landing_page_with_grid_preprocess_node__ims_landing_page_with_grid(array &$variables) {
+  \Drupal::service('ims_landing_page_with_grid.paragraph_preprocessor')
+    ->preprocessNode($variables);
+}
