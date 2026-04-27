@@ -6,13 +6,14 @@ dependencies:
     - field.field.node.ims_landing_page_with_grid.field_ims_grid_items
     - field.field.node.ims_landing_page_with_grid.field_ims_grid_subtitle
     - field.field.node.ims_landing_page_with_grid.field_ims_grid_title
+    - field.field.node.ims_landing_page_with_grid.field_ims_landing_with_grid_img
     - field.field.node.ims_landing_page_with_grid.field_ims_social_media
     - node.type.ims_landing_page_with_grid
-    - workflows.workflow.editorial
   module:
     - color_field
     - content_moderation
     - lightning_scheduler
+    - media_library
     - paragraphs
     - paragraphs_browser
     - path
@@ -68,6 +69,13 @@ content:
     settings:
       size: 60
       placeholder: ''
+    third_party_settings: {  }
+  field_ims_landing_with_grid_img:
+    type: media_library_widget
+    weight: 128
+    region: content
+    settings:
+      media_types: {  }
     third_party_settings: {  }
   field_ims_social_media:
     type: entity_reference_paragraphs_browser

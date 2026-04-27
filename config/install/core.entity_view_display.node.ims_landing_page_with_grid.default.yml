@@ -1,4 +1,4 @@
-langcode: en
+langcode: lt
 status: true
 dependencies:
   config:
@@ -6,6 +6,7 @@ dependencies:
     - field.field.node.ims_landing_page_with_grid.field_ims_grid_items
     - field.field.node.ims_landing_page_with_grid.field_ims_grid_subtitle
     - field.field.node.ims_landing_page_with_grid.field_ims_grid_title
+    - field.field.node.ims_landing_page_with_grid.field_ims_landing_with_grid_img
     - field.field.node.ims_landing_page_with_grid.field_ims_social_media
     - node.type.ims_landing_page_with_grid
   module:
@@ -49,6 +50,15 @@ content:
       link_to_entity: false
     third_party_settings: {  }
     weight: 101
+    region: content
+  field_ims_landing_with_grid_img:
+    type: entity_reference_entity_view
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    weight: 108
     region: content
   field_ims_social_media:
     type: entity_reference_revisions_entity_view
