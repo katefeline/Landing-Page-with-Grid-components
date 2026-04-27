@@ -4,7 +4,7 @@
   background-size: 201% 100%;
   background-position: 100% 100%;
   transition: all 0.3s ease;
-  padding: 2vh;
+  padding: 1vh;
   margin: 0.5vh;
 }
 .ims_grid_layout_grid_items_text a:hover {
@@ -23,29 +23,5 @@
 
 .ims_grid_layout_grid_items_text a:hover::after {
   content: url(/themes/custom/maggi/UI/build/images/2DLn8gj.svg);
-}
-
-/* Banner gradient overlay */
-.ims_grid_banner_container {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-}
-
-.ims_grid_banner_container::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 100%;
-  background: linear-gradient(180deg, hsla(0, 0%, 98.8%, 0) 47%, hsla(0, 0%, 98.8%, .7) 75%, #fcfcfc);
-  pointer-events: none;
-}
-
-.ims_grid_banner {
-  display: block;
-  width: 100%;
-  height: auto;
 }
 
