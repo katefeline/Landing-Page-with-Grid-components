@@ -2,11 +2,12 @@
 
 namespace Drupal\ims_landing_page_with_grid\Service;
 
+use Drupal\Core\Entity\ContentEntityInterface;
 use Drupal\Core\File\FileUrlGeneratorInterface;
 use Drupal\paragraphs\Entity\Paragraph;
 
 /**
- * Handles preprocess logic for IMS paragraph types.
+ * Handles preprocess logic for IMS content types and paragraph types.
  */
 class ImsParagraphPreprocessor {
 
@@ -68,16 +69,32 @@ class ImsParagraphPreprocessor {
   }
 
   /**
+   * Preprocess variables for the ims_landing_page_with_grid node.
+   */
+  public function preprocessNode(array &$variables): void {
+    /** @var \Drupal\node\Entity\Node $node */
+    $node = $variables['node'];
+
+    $image = $this->extractImageData($node, 'field_ims_landing_with_grid_img');
+    $variables['banner_image_url'] = $image['url'];
+    $variables['banner_image_alt'] = $image['alt'];
+
+    // Set banner flag if image exists
+    $variables['banner'] = !empty($image['url']);
+  }
+
+
+  /**
    * Extracts image URL and alt text from a media entity reference field.
    *
    * @return array{url: string, alt: string}
    */
-  private function extractImageData(Paragraph $paragraph, string $fieldName): array {
-    if (!$paragraph->hasField($fieldName) || $paragraph->get($fieldName)->isEmpty()) {
+  private function extractImageData(ContentEntityInterface $entity, string $fieldName): array {
+    if (!$entity->hasField($fieldName) || $entity->get($fieldName)->isEmpty()) {
       return ['url' => '', 'alt' => ''];
     }
 
-    $media = $paragraph->get($fieldName)->entity;
+    $media = $entity->get($fieldName)->entity;
     $image_item = $media->get('field_media_image')->first();
 
     if ($image_item && $image_item->entity) {
