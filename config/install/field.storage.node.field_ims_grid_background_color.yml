@@ -4,6 +4,9 @@ dependencies:
   module:
     - color_field
     - node
+  enforced:
+    module:
+      - ims_landing_page_with_grid
 id: node.field_ims_grid_background_color
 field_name: field_ims_grid_background_color
 entity_type: node

@@ -17,6 +17,9 @@ dependencies:
     - paragraphs
     - paragraphs_browser
     - path
+  enforced:
+    module:
+      - ims_landing_page_with_grid
 id: node.ims_landing_page_with_grid.default
 targetEntityType: node
 bundle: ims_landing_page_with_grid

@@ -4,6 +4,9 @@ dependencies:
   module:
     - media
     - node
+  enforced:
+    module:
+      - ims_landing_page_with_grid
 id: node.field_ims_landing_with_grid_img
 field_name: field_ims_landing_with_grid_img
 entity_type: node
