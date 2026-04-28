@@ -14,16 +14,14 @@
   background-image: linear-gradient(90deg, #3e2b1a 0, #fff33e 50%);
   transition: all 0.3s ease;
 }
+
 .ims_grid_layout_grid_items_text a::after {
-  color: #b39d8a;
-}
-.ims_grid_layout_grid_items_text a::after {
-  content: url(/themes/custom/maggi/UI/build/images/Cp-5Fbr.svg);
+  content: url(/modules/custom/ims_landing_page_with_grid/modules/ims_landing_page_with_grid_maggi/assets/images/arrow_marron.svg);
   margin-left: 1vh;
   vertical-align: middle;
 }
 
 .ims_grid_layout_grid_items_text a:hover::after {
-  content: url(/themes/custom/maggi/UI/build/images/2DLn8gj.svg);
+  content: url(/modules/custom/ims_landing_page_with_grid/modules/ims_landing_page_with_grid_maggi/assets/images/arrow_yellow.svg);
 }
 
