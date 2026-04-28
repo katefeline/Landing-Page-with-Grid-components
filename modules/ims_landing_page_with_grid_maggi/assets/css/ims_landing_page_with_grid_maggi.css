@@ -16,12 +16,12 @@
 }
 
 .ims_grid_layout_grid_items_text a::after {
-  content: url(/modules/custom/ims_landing_page_with_grid/modules/ims_landing_page_with_grid_maggi/assets/images/arrow_marron.svg);
+  content: url(/modules/custom/ims_landing_page_with_grid/modules/ims_landing_page_with_grid_maggi/assets/images/arrow_yellow.svg);
   margin-left: 1vh;
   vertical-align: middle;
 }
 
 .ims_grid_layout_grid_items_text a:hover::after {
-  content: url(/modules/custom/ims_landing_page_with_grid/modules/ims_landing_page_with_grid_maggi/assets/images/arrow_yellow.svg);
+  content: url(/modules/custom/ims_landing_page_with_grid/modules/ims_landing_page_with_grid_maggi/assets/images/arrow_maroon.svg);
 }
 
