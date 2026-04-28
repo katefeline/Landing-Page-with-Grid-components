@@ -31,6 +31,12 @@
   height: 100%;
 }
 
+@media (max-width: 576px) {
+  .ims_grid_banner_container img {
+    object-fit: contain;
+  }
+}
+
 .ims_grid_layout_headings {
   margin: 1vh;
 }
