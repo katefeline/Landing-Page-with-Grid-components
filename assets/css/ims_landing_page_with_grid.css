@@ -24,6 +24,11 @@
 
 .ims_grid_banner_container {
   width: 100%;
+  height: 50vh;
+}
+
+.ims_grid_banner_container img {
+  height: 100%;
 }
 
 .ims_grid_layout_headings {
