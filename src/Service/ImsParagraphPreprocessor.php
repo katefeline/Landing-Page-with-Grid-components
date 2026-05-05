@@ -19,7 +19,7 @@ class ImsParagraphPreprocessor {
    * Preprocess variables for the ims_social_media_item paragraph.
    */
   public function preprocessSocialMediaItem(array &$variables): void {
-    /** @var Paragraph $paragraph */
+    /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
     $paragraph = $variables['paragraph'];
 
     $image = $this->extractImageData($paragraph, 'field_ims_social_media_item_img');
@@ -36,12 +36,13 @@ class ImsParagraphPreprocessor {
    * Preprocess variables for the ims_grid_item paragraph.
    */
   public function preprocessGridItem(array &$variables): void {
-    /** @var Paragraph $paragraph */
+    /** @var \Drupal\paragraphs\Entity\Paragraph $paragraph */
     $paragraph = $variables['paragraph'];
 
     $variables['grid_title'] = '';
     $variables['grid_subtitle'] = '';
-    $variables['layout_bg_color'] = '#f3f3f3'; // Default color
+    // Default color.
+    $variables['layout_bg_color'] = '#f3f3f3';
 
     if ($paragraph->hasField('field_ims_grid_item_title') && !$paragraph->get('field_ims_grid_item_title')->isEmpty()) {
       $variables['grid_title'] = $paragraph->get('field_ims_grid_item_title')->value;
@@ -79,15 +80,22 @@ class ImsParagraphPreprocessor {
     $variables['banner_image_url'] = $image['url'];
     $variables['banner_image_alt'] = $image['alt'];
 
-    // Set banner flag if image exists
+    // Set banner flag if image exists.
     $variables['banner'] = !empty($image['url']);
   }
-
 
   /**
    * Extracts image URL and alt text from a media entity reference field.
    *
-   * @return array{url: string, alt: string}
+   * @param \Drupal\Core\Entity\ContentEntityInterface $entity
+   *   The entity containing the media reference field.
+   * @param string $fieldName
+   *   The machine name of the media reference field.
+   *
+   * @return array
+   *   An associative array containing:
+   *   - url: The generated URL for the image file, or empty string.
+   *   - alt: The alt text for the image, or empty string.
    */
   private function extractImageData(ContentEntityInterface $entity, string $fieldName): array {
     if (!$entity->hasField($fieldName) || $entity->get($fieldName)->isEmpty()) {
@@ -110,7 +118,21 @@ class ImsParagraphPreprocessor {
   /**
    * Extracts URL, target, rel and link text from a link field.
    *
+   * Retrieves link field data including the URL, target and rel attribute,
+   * and link title/text. Handles array rel attributes by converting to string.
+   * Returns empty values if the field is empty.
+   *
+   * @param \Drupal\paragraphs\Entity\Paragraph $paragraph
+   *   The paragraph entity containing the link field.
+   * @param string $fieldName
+   *   The machine name of the link field.
+   *
    * @return array{url: string, target: string, rel: string, text: string}
+   *   An associative array containing:
+   *   - url: The generated URL string, or empty string.
+   *   - target: The target attribute (e.g., '_blank'), or empty string.
+   *   - rel: The rel attribute (e.g., 'nofollow'), or empty string.
+   *   - text: The link title/text, or empty string.
    */
   private function extractLinkData(Paragraph $paragraph, string $fieldName): array {
     $defaults = ['url' => '', 'target' => '', 'rel' => '', 'text' => ''];
@@ -143,4 +165,3 @@ class ImsParagraphPreprocessor {
   }
 
 }
-

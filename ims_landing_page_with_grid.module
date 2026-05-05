@@ -2,11 +2,35 @@
 
 /**
  * @file
- * IMS landing page with grid components made with paragraphs.
+ * IMS Landing Page with Grid module.
+ *
+ * Provides a custom content type for creating landing pages with a grid layout.
+ * The module includes:
+ * - A custom node type: ims_landing_page_with_grid
+ * - Paragraph types: ims_social_media_item, ims_grid_item
+ * - Custom templates for responsive grid layouts with image support
+ * - Preprocessing service for extracting media and link data
+ *
+ * @see \Drupal\ims_landing_page_with_grid\Service\ImsParagraphPreprocessor
  */
 
 /**
  * Implements hook_theme().
+ *
+ * Defines custom theme implementations for IMS landing page components.
+ * Registers template files for the custom content type and paragraph types.
+ *
+ * @param array $existing
+ *   An array of existing theme implementations.
+ * @param string $type
+ *   Whether a theme, module, etc. is being processed.
+ * @param string $theme
+ *   The actual name of theme that is being being checked.
+ * @param string $path
+ *   The directory path of the theme or module.
+ *
+ * @return array
+ *   An associative array of theme hook definitions.
  */
 function ims_landing_page_with_grid_theme($existing, $type, $theme, $path) {
   return [
@@ -25,12 +49,18 @@ function ims_landing_page_with_grid_theme($existing, $type, $theme, $path) {
     'field__node__field_ims_grid_items__ims_landing_page_with_grid' => [
       'base hook' => 'field',
       'template' => 'field--node--field-ims-grid-items--ims-landing-page-with-grid',
-    ]
+    ],
   ];
 }
 
 /**
  * Implements hook_preprocess_paragraph__ims_social_media_item().
+ *
+ * Preprocesses variables for the ims_social_media_item paragraph type.
+ * Extracts media image data and link information for social media icons.
+ *
+ * @param array $variables
+ *   An associative array of variables to pass to the theme template.
  */
 function ims_landing_page_with_grid_preprocess_paragraph__ims_social_media_item(array &$variables) {
   \Drupal::service('ims_landing_page_with_grid.paragraph_preprocessor')
@@ -39,15 +69,26 @@ function ims_landing_page_with_grid_preprocess_paragraph__ims_social_media_item(
 
 /**
  * Implements hook_preprocess_paragraph__ims_grid_item().
+ *
+ * Preprocesses variables for the ims_grid_item paragraph type.
+ * Extracts grid item title, subtitle, image, link, and background color.
+ *
+ * @param array $variables
+ *   An associative array of variables to pass to the theme template.
  */
 function ims_landing_page_with_grid_preprocess_paragraph__ims_grid_item(array &$variables) {
   \Drupal::service('ims_landing_page_with_grid.paragraph_preprocessor')
     ->preprocessGridItem($variables);
 }
 
-
 /**
  * Implements hook_preprocess_node__ims_landing_page_with_grid().
+ *
+ * Preprocesses variables for the ims_landing_page_with_grid node type.
+ * Extracts banner image data and sets the banner flag.
+ *
+ * @param array $variables
+ *   An associative array of variables to pass to the theme template.
  */
 function ims_landing_page_with_grid_preprocess_node__ims_landing_page_with_grid(array &$variables) {
   \Drupal::service('ims_landing_page_with_grid.paragraph_preprocessor')

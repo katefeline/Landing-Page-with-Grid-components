@@ -1,7 +1,13 @@
+{#
+/**
+ * @file
+ * Theme implementation for IMS Social Media Item paragraph.
+ */
+#}
 {% if social_media_image_url %}
   <div class="social-item">
         <a href="{{ social_media_link_url }}" target="{{ social_media_link_target|default('_blank') }}" rel="{{ social_media_link_rel }}">
-          <img src="{{ social_media_image_url }}" alt="{{ social_media_image_alt|e }}">
+          <img src="{{ social_media_image_url }}" alt="{{ social_media_image_alt|e }}" loading="lazy" decoding="async">
         </a>
   </div>
 {% endif %}

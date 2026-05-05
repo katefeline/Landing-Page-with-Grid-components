@@ -1,6 +1,12 @@
+{#
+/**
+ * @file
+ * Theme implementation for IMS Grid Item paragraph.
+ */
+#}
 <div class="ims_grid_layout_grid_items" style="background-color: {{ layout_bg_color|e('html_attr') }};">
     <div class="ims_grid_layout_grid_items_heading">
-      <img src="{{ grid_image_url }}" alt="{{ grid_image_alt|e }}">
+      <img src="{{ grid_image_url }}" alt="{{ grid_image_alt|e }}" loading="lazy" decoding="async">
       <h3>{{ grid_title }}</h3>
     </div>
     <hr>

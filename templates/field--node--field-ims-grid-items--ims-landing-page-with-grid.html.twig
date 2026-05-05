@@ -1,4 +1,13 @@
-<div class="ims_grid_layout_grid_entity_reference_template">
+{#
+/**
+ * @file
+ * Theme implementation for field_ims_grid_items on IMS Landing Page with Grid.
+ *
+ * Available variables:
+ * - items: List of grid item paragraphs.
+ */
+#}
+<div class="ims_grid_layout_grid_entity_reference_template" role="list">
   {% for item in items %}
     {{ item.content }}
   {% endfor %}

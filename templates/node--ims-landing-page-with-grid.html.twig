@@ -1,9 +1,21 @@
+{#
+/**
+ * @file
+ * Theme implementation for IMS Landing Page with Grid content type.
+ *
+ * Available variables:
+ * - content: Node content fields.
+ * - banner: Boolean flag indicating if banner image exists.
+ * - banner_image_url: URL of the banner image.
+ * - banner_image_alt: Alt text for the banner image.
+ */
+#}
 {{ attach_library('ims_landing_page_with_grid/ims_landing_page_with_grid') }}
 
-<div class="ims_grid_layout">
+<div class="{% if banner %}ims_grid_layout_margin {% else %}ims_grid_layout_with_margin {% endif %}">
   {% if banner %}
     <div class="ims_grid_banner_container">
-      <img class='ims_grid_banner' src="{{ banner_image_url }}" alt="{{ banner_image_alt|e }}">
+      <img class='ims_grid_banner' src="{{ banner_image_url }}" alt="{{ banner_image_alt|e }}" loading="lazy" decoding="async">
     </div>
   {% endif %}
   <div class="{% if banner %}ims_grid_layout_wrapper_no_margin {% else %}ims_grid_layout_wrapper {% endif %}">
@@ -12,7 +24,6 @@
       <h2>{{ content.field_ims_grid_subtitle }}</h2>
       <hr>
     </div>
-
 
     {% if content.field_ims_social_media %}
       <div class="ims_grid_layout_social_media_wrapper">
@@ -28,4 +39,3 @@
   </div>
 
 </div>
-
